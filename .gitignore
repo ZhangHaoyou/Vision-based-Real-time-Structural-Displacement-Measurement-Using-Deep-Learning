@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+._*
+
+# Large raw data — hosted separately (see USAGE.md > Dataset)
+experimental_data/
+logs/
+detections/
+
+# Local scratch/debug artifacts
+frame0.jpg
+modified_target.jpg
+padded_image.jpg
+target.jpg
+tmp.txt
+numbers.txt
+positions_test.txt
+
+# Editor/OS
+.DS_Store
+.vscode/
