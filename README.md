@@ -37,11 +37,11 @@ For a full description of the repository layout, environment setup, dataset deta
 
 ## Data availability
 
-The raw experimental recordings and the full 2,132-image labelled dataset are too large for a normal Git push. They will be released on **Zenodo** with a DOI:
+The raw experimental recordings and the full 2,132-image labelled dataset (too large for a normal Git push) are openly published on **Zenodo** under CC-BY 4.0:
 
-[![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)](https://zenodo.org) <!-- TODO: replace with the Zenodo DOI badge once the record is published -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21400637.svg)](https://doi.org/10.5281/zenodo.21400637)
 
-Until the DOI is live, feel free to email me for early access (see Contact). Full details are in [USAGE.md § Dataset](USAGE.md#3-dataset).
+Two archives are provided — `VOCdevkit.zip` (24.2 GB, the labelled train/validation image set) and `experimental_data.zip` (19.6 GB, raw camera recordings + sensor logs). See [USAGE.md § Dataset](USAGE.md#3-dataset) for exactly what's in each archive and where to extract them.
 
 ## Built on
 
@@ -58,6 +58,8 @@ This implementation extends [bubbliiiing/yolov5-pytorch](https://github.com/bubb
   doi     = {10.1016/j.apm.2026.117187}
 }
 ```
+
+If you use the dataset itself, please cite it separately — see [USAGE.md § Citation](USAGE.md#9-citation) for the dataset's Zenodo DOI and BibTeX entry.
 
 ## License
 

@@ -80,9 +80,29 @@ The Y-BWA-W detector was trained on a purpose-built database of chessboard-targe
 - **Train / validation split**: 1,492 images (70%, augmented) for training, 640 images (30%, held out and *not* augmented) for validation.
 - **Annotation format**: the same VOC-style convention used by [bubbliiiing/yolov5-pytorch](https://github.com/bubbliiiing/yolov5-pytorch) — one line per image, `image_path xmin,ymin,xmax,ymax,class_id ...`. In this repo, the index files live in `model_data/2007_train.txt`, `2007_val.txt`, and `2007_test.txt`, with the class list in `model_data/target_classes.txt` and anchor boxes in `model_data/yolo_anchors.txt`.
 
-**Availability**: this repository ships the trained weights (`model_data/best_epoch_weights.pth`, `model_data/ckpt_target_epoch50.t7`) and the annotation index files, so no dataset download is needed to run inference or the validation scripts.
+**Availability**: this repository ships the trained weights (`model_data/best_epoch_weights.pth`, `model_data/ckpt_target_epoch50.t7`) and the annotation index files, so no dataset download is needed to run inference or the validation scripts as-is.
 
-The raw labelled images (the 2,132-image database above) and the raw experimental recordings/sensor logs (`experimental_data/`, multi-gigabyte, mostly video) are **not committed to this git repository** — they're being released openly on **[Zenodo](https://zenodo.org)** instead, which is better suited to large research datasets and provides a citable DOI. The Zenodo record is linked from the main [README](README.md#data-availability); until it's published, email me for early access (see Contact).
+The raw labelled images (the 2,132-image database above) and the raw experimental recordings/sensor logs (`experimental_data/`) are too large for this git repository and are instead openly published on Zenodo under **CC-BY 4.0**:
+
+> Zhang, H., Cheng, X., Li, Y., Guan, H. (2026). *Vision-based Real-time Structural Displacement Measurement Using Deep Learning — Dataset* [Data set]. Zenodo. [doi.org/10.5281/zenodo.21400638](https://doi.org/10.5281/zenodo.21400638)
+>
+> Concept DOI (always resolves to the latest version): [doi.org/10.5281/zenodo.21400637](https://doi.org/10.5281/zenodo.21400637)
+
+Two archives are provided:
+
+| Archive | Size | Contents | Extract to |
+|---|---|---|---|
+| `VOCdevkit.zip` | 24.2 GB | The full 2,132-image labelled database (train + validation), in the VOC-style layout expected by `model_data/2007_train.txt` / `2007_val.txt` / `2007_test.txt` | Repository root, so `VOCdevkit/VOC2007/JPEGImages/...` sits alongside `model_data/`, `nets/`, etc. |
+| `experimental_data.zip` | 19.6 GB | Raw camera recordings + sensor logs for the three validation experiments | Repository root (creates/replaces `experimental_data/`) |
+
+```bash
+# from the repository root
+curl -L -o VOCdevkit.zip "https://zenodo.org/records/21400638/files/VOCdevkit.zip?download=1"
+curl -L -o experimental_data.zip "https://zenodo.org/records/21400638/files/experimental_data.zip?download=1"
+
+unzip VOCdevkit.zip -d .
+unzip experimental_data.zip -d .
+```
 
 ## 4. Environment setup
 
@@ -240,6 +260,18 @@ And on the following methods/papers (full citations in the accepted manuscript):
   journal = {Applied Mathematical Modelling},
   year    = {2026},
   doi     = {10.1016/j.apm.2026.117187}
+}
+```
+
+If you use the dataset itself, please also cite:
+
+```bibtex
+@dataset{zhang2026dataset,
+  title     = {Vision-based Real-time Structural Displacement Measurement Using Deep Learning --- Dataset},
+  author    = {Zhang, Haoyou and Cheng, Xiaowei and Li, Yi and Guan, Hong},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.21400638}
 }
 ```
 
