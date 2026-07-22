@@ -13,6 +13,14 @@ This project measures structural translational displacement in real time by dete
 - **Deep SORT tracking** — keeps the target identity through short-term occlusion.
 - Sub-pixel-accurate validation on a dynamic shaking-table test (RMSE 2.05 mm) and a static cyclic test (RMSE 0.11 mm), plus out-of-plane (depth) displacement estimation, all at ~35 FPS.
 
+## Demo video
+
+Click the thumbnail to watch (opens GitHub's built-in video player):
+
+[![Shaking-table test demo](assets/shaking_table_test_thumb.jpg)](detections/shaking_table_test.mp4)
+
+*Real shaking-table test: the Y-BWA-W + Deep SORT framework tracking the chessboard target in real time, with the live displacement time history plotted alongside.*
+
 ## Quick start
 
 ```bash
@@ -32,6 +40,7 @@ For a full description of the repository layout, environment setup, dataset deta
 | Path | What it is |
 |---|---|
 | `predict.py`, `main.py`, `yolo.py` | Detection / tracking inference entry points |
+| `predict_video.py` | Track one user-selected target through any recorded video (see [USAGE.md § 5.8](USAGE.md#58-predict_videopy--track-one-user-selected-target-in-any-video-general-purpose)) |
 | `validation.py`, `depth_measurement.py` | Scripts reproducing the paper's in-plane and out-of-plane validation experiments |
 | `nets/`, `utils/` | Model architectures (BWA-YOLO, Deep SORT) and supporting utilities (WNMS, dataloaders, perspective correction) |
 | `model_data/` | Trained weights, class/anchor files, Deep SORT config, and dataset annotation index (see [USAGE.md § Dataset](USAGE.md#3-dataset)) |

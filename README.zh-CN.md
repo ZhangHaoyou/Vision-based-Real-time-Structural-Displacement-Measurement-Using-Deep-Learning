@@ -13,6 +13,14 @@
 - **Deep SORT 跟踪** —— 在短时遮挡下保持目标身份的连续性。
 - 在动态振动台试验（RMSE 2.05 mm）和静力往复试验（RMSE 0.11 mm）中均达到亚像素级精度，并可进行面外（深度方向）位移估计，处理速度约 35 FPS。
 
+## 演示视频
+
+点击缩略图观看完整视频（将打开 GitHub 内置的视频播放器）：
+
+[![振动台试验演示](assets/shaking_table_test_thumb.jpg)](detections/shaking_table_test.mp4)
+
+*真实振动台试验：Y-BWA-W + Deep SORT 框架对棋盘格标靶进行实时跟踪，并同步显示实时位移时程曲线。*
+
 ## 快速开始
 
 ```bash
@@ -32,6 +40,7 @@ python predict.py        # 使用已包含的训练权重进行推理
 | 路径 | 说明 |
 |---|---|
 | `predict.py`、`main.py`、`yolo.py` | 检测/跟踪推理入口脚本 |
+| `predict_video.py` | 跟踪用户在任意录制视频中选定的单个目标（详见 USAGE.zh-CN.md 第 5.8 节） |
 | `validation.py`、`depth_measurement.py` | 复现论文面内、面外验证试验的脚本 |
 | `nets/`、`utils/` | 模型结构（BWA-YOLO、Deep SORT）及配套工具（WNMS、数据加载、透视校正） |
 | `model_data/` | 训练权重、类别/先验框文件、Deep SORT 配置以及数据集标注索引（详见 USAGE.zh-CN.md 第 3 节「数据集」） |

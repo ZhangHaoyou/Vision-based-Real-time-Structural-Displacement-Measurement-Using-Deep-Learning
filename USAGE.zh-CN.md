@@ -68,7 +68,8 @@ validation/
 │   └── raw_data/                     # 传感器日志（.bsi / .txt）
 │
 ├── logs/                          # 脚本输出：位移曲线、检测位置等（未纳入 git 版本控制）
-└── detections/                    # 脚本输出：裁剪/标注后的检测图像（未纳入 git 版本控制）
+└── detections/                    # 脚本输出：裁剪/标注后的检测图像，按视频分文件夹存放
+    └── shaking_table_test.mp4      # 演示视频（作为 .gitignore 的例外被纳入版本控制 —— 详见 README.zh-CN.md）
 ```
 
 `experimental_data/`、`logs/` 以及 `detections/` 已通过 `.gitignore` 排除在版本控制之外（详见下方“数据集”一节）—— 它们可通过运行脚本重新生成，或从 Zenodo 归档中恢复。

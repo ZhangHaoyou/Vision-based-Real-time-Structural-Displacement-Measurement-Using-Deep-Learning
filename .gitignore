@@ -5,7 +5,9 @@ __pycache__/
 # Large raw data — hosted separately (see USAGE.md > Dataset)
 experimental_data/
 logs/
-detections/
+detections/*
+!detections/shaking_table_test.mp4
+!detections/static_test.mp4
 
 # Local scratch/debug artifacts
 frame0.jpg
