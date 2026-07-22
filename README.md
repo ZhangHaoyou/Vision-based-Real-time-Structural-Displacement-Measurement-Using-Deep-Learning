@@ -15,11 +15,9 @@ This project measures structural translational displacement in real time by dete
 
 ## Demo video
 
-Click the thumbnail to watch (opens GitHub's built-in video player):
+![Shaking-table test demo](assets/shaking_table_test.gif)
 
-[![Shaking-table test demo](assets/shaking_table_test_thumb.jpg)](detections/shaking_table_test.mp4)
-
-*Real shaking-table test: the Y-BWA-W + Deep SORT framework tracking the chessboard target in real time, with the live displacement time history plotted alongside.*
+*Real shaking-table test: the Y-BWA-W + Deep SORT framework tracking the chessboard target in real time, with the live displacement time history plotted alongside. ([Full-resolution video](detections/shaking_table_test.mp4))*
 
 ## Quick start
 

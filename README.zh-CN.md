@@ -15,11 +15,9 @@
 
 ## 演示视频
 
-点击缩略图观看完整视频（将打开 GitHub 内置的视频播放器）：
+![振动台试验演示](assets/shaking_table_test.gif)
 
-[![振动台试验演示](assets/shaking_table_test_thumb.jpg)](detections/shaking_table_test.mp4)
-
-*真实振动台试验：Y-BWA-W + Deep SORT 框架对棋盘格标靶进行实时跟踪，并同步显示实时位移时程曲线。*
+*真实振动台试验：Y-BWA-W + Deep SORT 框架对棋盘格标靶进行实时跟踪，并同步显示实时位移时程曲线。（[完整分辨率视频](detections/shaking_table_test.mp4)）*
 
 ## 快速开始
 
