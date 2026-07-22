@@ -1,3 +1,5 @@
+**[English](USAGE.md) | [简体中文](USAGE.zh-CN.md)**
+
 # Usage Guide
 
 This guide covers the project background, the full repository layout, the dataset, environment setup, and how to run every script — including the ones used to reproduce the validation results reported in the paper.

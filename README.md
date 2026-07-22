@@ -1,3 +1,5 @@
+**[English](README.md) | [简体中文](README.zh-CN.md)**
+
 # Vision-based Real-time Structural Displacement Measurement Using Deep Learning
 
 Official code release for:
